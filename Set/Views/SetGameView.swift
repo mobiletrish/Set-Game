@@ -20,7 +20,7 @@ struct SetGameView: View {
             AspectVGrid(items: game.cards, aspectRatio: 2/3, content: { card in
                 cardView(for: card)
             })
-            .foregroundColor(.green)
+            .foregroundColor(.gray)
             .padding(.horizontal)
             
             Spacer()

@@ -24,10 +24,11 @@ struct OvalView: View {
                         .aspectRatio(DrawingConstants.aspectRatio, contentMode: .fit)
                         .foregroundColor(Color.named(color).opacity(DrawingConstants.opacity))
                 } else {
-                    // TODO: this should be only a border in color and a fill of white
                     Capsule()
+                        .stroke(Color.named(color), lineWidth: DrawingConstants.lineWidth)
+                        .background(Rectangle()
+                                        .fill(Color.white))
                         .aspectRatio(DrawingConstants.aspectRatio, contentMode: .fit)
-                        .border(Color.named(color), width: DrawingConstants.lineWidth)
                 }
             }
         }
