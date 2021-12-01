@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0792FE2747BAE70049BD8A /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = DA0792FD2747BAE70049BD8A /* ViewInspector */; };
+		DA0793012747BB7F0049BD8A /* SetGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0793002747BB7F0049BD8A /* SetGameTests.swift */; };
+		DA079304274CFC530049BD8A /* DefaultSetGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA079303274CFC530049BD8A /* DefaultSetGameTests.swift */; };
+		DA079307274CFEBB0049BD8A /* RectangleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA079306274CFEBB0049BD8A /* RectangleViewTests.swift */; };
 		DA18C05926F9E7F800E54D0C /* SetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C05826F9E7F800E54D0C /* SetApp.swift */; };
 		DA18C05D26F9E7F900E54D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA18C05C26F9E7F900E54D0C /* Assets.xcassets */; };
 		DA18C06026F9E7F900E54D0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA18C05F26F9E7F900E54D0C /* Preview Assets.xcassets */; };
@@ -42,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0793002747BB7F0049BD8A /* SetGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameTests.swift; sourceTree = "<group>"; };
+		DA079303274CFC530049BD8A /* DefaultSetGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSetGameTests.swift; sourceTree = "<group>"; };
+		DA079306274CFEBB0049BD8A /* RectangleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleViewTests.swift; sourceTree = "<group>"; };
 		DA18C05526F9E7F800E54D0C /* Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Set.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA18C05826F9E7F800E54D0C /* SetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetApp.swift; sourceTree = "<group>"; };
 		DA18C05C26F9E7F900E54D0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0792FE2747BAE70049BD8A /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +98,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0792FF2747BB2C0049BD8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA0793002747BB7F0049BD8A /* SetGameTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA079302274CFC1C0049BD8A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DA079303274CFC530049BD8A /* DefaultSetGameTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DA079305274CFE5A0049BD8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA079306274CFEBB0049BD8A /* RectangleViewTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DA18C04C26F9E7F800E54D0C = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +168,9 @@
 		DA18C06926F9E7F900E54D0C /* SetTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA079305274CFE5A0049BD8A /* Views */,
+				DA079302274CFC1C0049BD8A /* ViewModels */,
+				DA0792FF2747BB2C0049BD8A /* Models */,
 				DA18C06A26F9E7F900E54D0C /* SetTests.swift */,
 				DA18C06C26F9E7F900E54D0C /* Info.plist */,
 			);
@@ -223,6 +258,9 @@
 				DA18C06826F9E7F900E54D0C /* PBXTargetDependency */,
 			);
 			name = SetTests;
+			packageProductDependencies = (
+				DA0792FD2747BAE70049BD8A /* ViewInspector */,
+			);
 			productName = SetTests;
 			productReference = DA18C06626F9E7F900E54D0C /* SetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -276,6 +314,9 @@
 				Base,
 			);
 			mainGroup = DA18C04C26F9E7F800E54D0C;
+			packageReferences = (
+				DA0792FC2747BAE70049BD8A /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = DA18C05626F9E7F800E54D0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,6 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA079304274CFC530049BD8A /* DefaultSetGameTests.swift in Sources */,
+				DA0793012747BB7F0049BD8A /* SetGameTests.swift in Sources */,
+				DA079307274CFEBB0049BD8A /* RectangleViewTests.swift in Sources */,
 				DA18C06B26F9E7F900E54D0C /* SetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,6 +686,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA0792FC2747BAE70049BD8A /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA0792FD2747BAE70049BD8A /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA0792FC2747BAE70049BD8A /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA18C04D26F9E7F800E54D0C /* Project object */;
 }

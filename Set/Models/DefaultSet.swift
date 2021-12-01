@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DefaultSet: Card, Identifiable {
+struct DefaultSet: Card, Identifiable, Equatable {
 
     var id: Int
     var state: State = .indeck
@@ -44,5 +44,13 @@ struct DefaultSet: Card, Identifiable {
             }
         }
         return cards
+    }
+
+    static func ==(lhs: DefaultSet, rhs: DefaultSet) -> Bool {
+        return lhs.id == rhs.id &&
+            lhs.color == rhs.color &&
+            lhs.number == rhs.number &&
+            lhs.shape == rhs.shape &&
+            lhs.shading == rhs.shading
     }
 }

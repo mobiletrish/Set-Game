@@ -19,13 +19,14 @@ struct SetGame<CardType> where CardType: Card {
     }
     
     mutating func dealCards() {
-        cards.indices.forEach{ cards[$0].state = State.indeck }
-        cards.prefix(12).indices.forEach { cards[$0 ].state = State.delt }
+        cards.indices.forEach{ cards[$0].state = .indeck }
+        cards.prefix(12).indices.forEach { cards[$0 ].state = .delt }
     }
     
     mutating func choose(_ card: CardType) {
         if let chosenIndex = cards.firstIndex(where: {$0.id == card.id}),
            cards[chosenIndex].state == .delt {
+            // TODO: what if it is the last three cards select and there are no more to select
             if cardsSelected.count < 3 {
                 cards[chosenIndex].state = .selected
             } else {
